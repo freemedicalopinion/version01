@@ -1,0 +1,123 @@
+
+
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="left-side sidebar-offcanvas">
+	<!-- sidebar: style can be found in sidebar.less -->
+	<section class="sidebar">
+		<!-- Sidebar user panel -->
+		<div class="user-panel ">
+			<div class="pull-left image">
+			</div>
+		</div>
+
+		<!-- sidebar menu: : style can be found in sidebar.less -->
+		<ul class="sidebar-menu">
+			<li class="active"><a href="welcome"> <i
+					class="fa fa-dashboard"></i> <span>Dashboard</span>
+			</a></li>
+			<sec:authorize access="hasRole('doctor')">
+				<li><a href="doctorpersonalinfo"> <i
+						class="fa fa-bar-chart-o"></i> <span>Personal Info</span>
+				</a></li>
+				<li><a href="aboutme"> <i class="fa fa-bar-chart-o"></i> <span>Professional
+							Info</span>
+				</a></li>
+				<li><a href="practiceInfo"> <i class="fa fa-dashboard"></i>
+						<span>Practice Info</span>
+				</a></li>
+
+			</sec:authorize>
+			<sec:authorize access="hasRole('hospital')">
+				<li><a href="manageHopitalInfo"> <i
+						class="fa fa-bar-chart-o"></i> <span>Hospital Contact Info</span>
+				</a></li>
+				<li><a href="aboutme"> <i class="fa fa-bar-chart-o"></i> <span>Hospital
+							Profile </span>
+				</a></li>
+
+			</sec:authorize>
+			<sec:authorize access="hasRole('Admin')">
+				<li class="treeview"><a href="#"> <i
+						class="fa fa-bar-chart-o"></i> <span>Users</span> <i
+						class="fa fa-angle-left pull-right"></i>
+				</a>
+					<ul class="treeview-menu">
+						<li><a href="manageUsers"><i
+								class="fa fa-angle-double-right"></i> Manage Users</a></li>
+						<li><a href="internalUserLogin"><i
+								class="fa fa-angle-double-right"></i> Internal Login</a></li>
+					</ul></li>
+				<li><a href="addCity"> <i class="fa fa-bar-chart-o"></i> <span>Manage
+							City </span>
+				</a></li>
+				<li><a href="createSpecilityPage"> <i class="fa fa-table"></i>
+						<span>Manage Specility</span>
+				</a></li>
+				<li><a href="createProceduresPage"> <i class="fa fa-table"></i>
+						<span>Manage Procedure</span>
+				</a></li>
+				<li><a href="createConditionPage"> <i class="fa fa-table"></i>
+						<span>Manage Condition</span>
+				</a></li>
+
+				<li><a href="manageContentCategory"> <i class="fa fa-table"></i>
+						<span>Manage Category</span>
+				</a></li>
+				<li><a href="manageFAQs"> <i class="fa fa-table"></i>
+						<span>Manage FAQs</span>
+				</a></li>
+			</sec:authorize>
+
+
+			<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
+					<span>Blog</span> <i class="fa fa-angle-left pull-right"></i>
+			</a>
+				<ul class="treeview-menu">
+					<li><a href="addBlogPage"><i
+							class="fa fa-angle-double-right"></i> Add a new Blog</a></li>
+					<li><a href="manageOldBlogPage"><i
+							class="fa fa-angle-double-right"></i>Blogs Inbox</a></li>
+					<sec:authorize access="hasRole('Admin')">
+						<li><a href="blogApprovalPage"><i
+								class="fa fa-angle-double-right"></i>Blogs Approval</a></li>
+					</sec:authorize>
+					<li><a href="blogTimeLine"><i
+							class="fa fa-angle-double-right"></i> Blogs TimeLine</a></li>
+				</ul></li>
+				
+			<sec:authorize access="hasRole('hospital')">
+				<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
+						<span>Media</span> <i class="fa fa-angle-left pull-right"></i>
+				</a>
+					<ul class="treeview-menu">
+						<li><a href="pages/tables/simple.html"><i
+								class="fa fa-angle-double-right"></i> News</a></li>
+						<li><a href="pages/tables/data.html"><i
+								class="fa fa-angle-double-right"></i> Youtube</a></li>
+					</ul></li>
+			</sec:authorize>
+			<sec:authorize access="hasRole('doctor')">
+				<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
+						<span>Media</span> <i class="fa fa-angle-left pull-right"></i>
+				</a>
+					<ul class="treeview-menu">
+						<li><a href="pages/tables/simple.html"><i
+								class="fa fa-angle-double-right"></i> News</a></li>
+						<li><a href="pages/tables/data.html"><i
+								class="fa fa-angle-double-right"></i> Youtube</a></li>
+					</ul></li>
+			</sec:authorize>
+			<sec:authorize access="hasRole('patient')">
+				<li><a href="userProfile"> <i class="fa fa-bar-chart-o"></i>
+						<span>User Profile </span>
+				</a></li>
+				<li><a href="userProfile"> <i class="fa fa-bar-chart-o"></i>
+						<span>User Health data </span>
+				</a></li>
+			</sec:authorize>
+		</ul>
+
+	</section>
+	<!-- /.sidebar -->
+</aside>
+

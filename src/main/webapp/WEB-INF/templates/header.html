@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- styles -->
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/layerslider.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/smoothness.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/fullwidth/skin.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/font-awesome.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/styles.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/color-blue.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/risk_matrix.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/risk_page.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/TableTools.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.css"> -->
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.min.css"> -->
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.theme.min.css"> -->
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery.feedback_me.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/login.css">
+	<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/contactus.css"> -->
+
+<!--/ styles -->
+
+</head>
+
+<body>
+	<div id="home-section">
+		<section class="header_language_bar">
+			<div class="container clearfix">
+				<div class="bar">
+					<div id="lang_sel">
+						<ul>
+							<li><a href="#" class="lang_sel_sel icl-en"> <img
+									class="iclflag"
+									src="http://clinico.creaws.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png"
+									alt="en" title="English"> &nbsp;Delhi
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="lang_sel">
+						<ul>
+							<li><a href="${pageContext.request.contextPath}/login"
+								class="lang_sel_sel icl-en">Sign In</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bar">
+					<div id="lang_sel">
+						<ul>
+							<li><a href="${pageContext.request.contextPath}/login"
+								class="lang_sel_sel icl-en">Sign Up</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- page header -->
+	<header class="page-header main-page">
+		<!-- logo -->
+		<section id="logo" class="logo">
+			<div>
+				<a href="/smo"><img
+					src="${pageContext.request.contextPath}/static/img/blue/logo.png"
+					width="190" height="50" alt="SMO"></a>
+			</div>
+		</section>
+		<!--/ logo -->
+
+		<!-- main nav -->
+		<nav class="main-nav">
+			<ul>
+				<li><a href='#home-section' class="active">Home</a></li>
+				
+				<li><a href='#doctor-section'>Doctors</a></li>
+				<li><a href='#hospital-section'>Hospitals</a></li>
+				<li><a href='#blog-section'>Blog</a></li>
+				<li><a href='#how-it-works-section'>How it works</a></li>
+				<li><a href='faq'>Faq</a></li>
+				<li><a href='#contact-us-section'>Contact Us</a></li>
+				<c:if test="${pageContext.request.userPrincipal.name != null}">
+					<li><a
+						href='${pageContext.request.contextPath}/secure/welcome' id="reg">My
+							Account</a></li>
+				</c:if>
+				<c:if test="${pageContext.request.userPrincipal.name != null}">
+					<li class="right"><i class="pic fa fa-user right"
+						style="margin-top: 0px;"></i>
+						<ul>
+							<li class="text">
+								<h2>${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.fname}&nbsp;${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.lname}</h2>
+								<hr>${pageContext.request.userPrincipal.name}
+
+								<hr> <c:url value="/logout" var="logoutUrl" />
+								<form action="${logoutUrl}" method="post" id="logoutForm">
+									<input type="hidden" name="${_csrf.parameterName}"
+										value="${_csrf.token}" />
+								</form> <script>
+									function formSubmit() {
+										document.getElementById("logoutForm")
+												.submit();
+									}
+								</script>
+								<button class="wpb_button wpb_btn-alt wpb_btn-small"
+									style="margin-bottom: 3px;" onclick="formSubmit();">Logout</button>
+							</li>
+						</ul></li>
+				</c:if>
+
+			</ul>
+		</nav>
+		<!--/ main nav -->
+
+		<!-- mobile nav -->
+		<nav id="mobile-main-nav" class="mobile-main-nav">
+			<i class="fa fa-bars"></i><a href="#" class="opener">Navigation</a>
+			<ul>
+				<li><a href='${pageContext.request.contextPath}/home' id="home"
+					class="active"><i class="fa fa-plus"></i>Home</a></li>
+				<li><a href='${pageContext.request.contextPath}/blogsHome'
+					id="blog"><i class="fa fa-plus"></i>Blog</a></li>
+				<c:if test="${pageContext.request.userPrincipal.name == null}">
+					<li><a href='${pageContext.request.contextPath}/login'
+						id="reg"><i class="fa fa-plus"></i>Login/Registration</a></li>
+				</c:if>
+				<c:if test="${pageContext.request.userPrincipal.name != null}">
+					<li class="right"><i class="pic fa fa-user right"
+						style="margin-top: 0px;"></i>
+						<ul>
+							<li class="text">
+								<h2>${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.fname}&nbsp;${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.lname}</h2>
+								<hr>${pageContext.request.userPrincipal.name}
+
+								<hr> <c:url value="/logout" var="logoutUrl" />
+								<form action="${logoutUrl}" method="post" id="logoutForm">
+									<input type="hidden" name="${_csrf.parameterName}"
+										value="${_csrf.token}" />
+								</form> <script>
+									function formSubmit() {
+										document.getElementById("logoutForm")
+												.submit();
+									}
+								</script>
+								<button class="wpb_button wpb_btn-alt wpb_btn-small"
+									style="margin-bottom: 3px;" onclick="formSubmit();">Logout</button>
+							</li>
+						</ul></li>
+				</c:if>
+
+			</ul>
+		</nav>
+		<!--/ mobile nav -->
+	</header>
+
+</body>
+</html>

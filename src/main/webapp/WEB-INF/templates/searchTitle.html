@@ -1,0 +1,173 @@
+
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/layerslider.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/smoothness.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/fullwidth/skin.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/font-awesome.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/styles.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/color-blue.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/risk_matrix.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/risk_page.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/TableTools.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.css"> -->
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.min.css"> -->
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery-ui.theme.min.css"> -->
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/jquery.feedback_me.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/contactus.css"> -->
+
+<!--/ styles -->
+<!-- metas -->
+<meta charset="utf-8">
+<meta name="author" content="MSO">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!--/ metas -->
+</head>
+<div class="page">
+	<!-- including header -->
+
+	<!-- page header -->
+	<header class="page-header page-header-other  main-page"
+		style="height: 79px;">
+		<!-- logo -->
+		<section id="logo" class="logo">
+			<div>
+				<a href="/smo"><img
+					src="${pageContext.request.contextPath}/static/img/blue/logo.png"
+					width="190" height="50" alt="SMO"></a>
+			</div>
+		</section>
+		<!--/ logo -->
+
+		<!-- main nav -->
+		<nav class="search-header">
+
+			<div class="wpb_tabs wpb_content_element">
+				<div class="wpb_tour_tabs_wrapper clearfix" style="border: none">
+					<ul class="wpb_tabs_nav clearfix" role="tablist" style="border: none">
+						<li role="tab" aria-selected="true" class="search-header-line"><a
+							href="#tab-q">Doctor</a></li>
+						<li role="tab"><a href="#tab-w" class="search-header-line">Hospital</a></li>
+						<li role="tab"><a href="#tab-e" class="search-header-line">Article</a></li>
+					</ul>
+					<div id="tab-q" class="wpb_tab" style="border: none">
+						<div class="wpb_text_column wpb_content_element">
+							<article class="feedback">
+								<form action="searchDoctor" >
+									<fieldset>
+										<div class="clearfix">
+											<div class="input header-imput">
+												<input type="text" placeholder="Doctor Name"
+													class="input-box-header doctorSearch"  name="doctor">
+											</div>
+											<div class="input header-imput-city">
+												<input type="text" placeholder="City"
+													class="input-box-header citySearch" name="city" >
+											</div>
+											<div class="input header-imput">
+												<button
+													class="wpb_button wpb_btn-small header-search-button">Search</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</article>
+						</div>
+					</div>
+					<div id="tab-w" class="wpb_tab" style="border: none">
+						<div class="wpb_text_column wpb_content_element">
+							<article class="feedback">
+								<form action="searchHospital" >
+									<fieldset>
+										<div class="clearfix">
+											<div class="input header-imput">
+												<input type="text" placeholder="Hospital Name"
+													name="hospital" class="input-box-header hospitalSearch">
+											</div>
+											<div class="input header-imput-city">
+												<input type="text" placeholder="City"
+													class="input-box-header citySearch" name="city" >
+											</div>
+											<div class="input header-imput">
+												<button
+													class="wpb_button wpb_btn-small header-search-button">Search</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</article>
+						</div>
+					</div>
+
+					<div id="tab-e" class="wpb_tab" style="border: none">
+						<div class="wpb_text_column wpb_content_element">
+							<article class="feedback">
+								<form action="searchArticle" >
+									<fieldset>
+										<div class="clearfix">
+											<div class="input header-imput">
+												<input type="text" placeholder="Doctor Name"
+													class="input-box-header searchArticle" name="article">
+											</div>
+											<div class="input header-imput-city">
+												<input type="text" placeholder="City"
+													class="input-box-header">
+											</div>
+											<div class="input header-imput">
+												<button
+													class="wpb_button wpb_btn-small header-search-button">Search</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</nav>
+		<nav class="bread-crumbs"
+			style="float: right; margin-top: 20px; margin-right: 105px;">
+			<a href="/smo" ><i class="fa fa-home"
+				style="margin-right: 5px;"></i>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+				href="/smo/blogs"><i class="fa fa-bookmark-o"
+				style="margin-right: 5px;"></i>Blogs</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+				href="/smo"><i class="fa fa-question-circle"
+				style="margin-right: 5px;"></i>FAQ</a>&nbsp;&nbsp;&nbsp;&nbsp; <a
+				href="/smo/login"><i class="fa fa-unlock"
+				style="margin-right: 5px;"></i>Login</a>&nbsp;&nbsp;&nbsp; <a
+				href="#" class="lang_sel_sel icl-en"> <img class="iclflag"
+				src="http://clinico.creaws.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png"
+				alt="en" title="English"> &nbsp;Delhi
+			</a>
+		</nav>
+	</header>
+</div>
+
+
